@@ -25,9 +25,9 @@ def MovementSystem(positionComponents : list[Position], velocityComponents : lis
 
 TestGame = Game()
 TestGame.AddSystem(MovementSystem)
-TestGame.AddEntity()                            \\
-        .AddComponent(Position(x=50,y=50))      \\
-        .AddComponent(Velocity(x=2,y=-1))       \\
+TestGame.AddEntity()                            \
+        .AddComponent(Position(x=50,y=50))      \
+        .AddComponent(Velocity(x=2,y=-1))       \
         .AddComponent(Renderable(sprite="player.png"))
 TestGame.Run()
 ``` 
@@ -51,9 +51,9 @@ def RenderSystem(positionComponents : list[Position], renderableComponents : lis
     for pos,renderable in zip(positionComponents, renderableComponents):
         TestGame.screen.blit(renderable.sprite, pos.ToTuple())
 
-TestGame.AddEntity()                           \\                
-        .AddComponent(Position(x=50,y=50))     \\        
-        .AddComponent(Velocity(x=0.5,y=0.5))   \\          
+TestGame.AddEntity()                           \                
+        .AddComponent(Position(x=50,y=50))     \        
+        .AddComponent(Velocity(x=0.5,y=0.5))   \          
         .AddComponent(Renderable(sprite='player.png'))
 
 TestGame.Run()
