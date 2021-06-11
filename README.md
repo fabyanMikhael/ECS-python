@@ -12,7 +12,7 @@ TestGame.Run()
 
 ### Basic game example with a system
 ```py
-from ECS import Game, Vector2d, Renderable
+from ECS import Game, Vector2d
 
 class Position (Vector2d): pass
 class Velocity (Vector2d): pass
@@ -27,8 +27,7 @@ TestGame = Game()
 TestGame.AddSystem(MovementSystem)
 TestGame.AddEntity()                            \
         .AddComponent(Position(x=50,y=50))      \
-        .AddComponent(Velocity(x=2,y=-1))       \
-        .AddComponent(Renderable(sprite="player.png"))
+        .AddComponent(Velocity(x=2,y=-1))
 TestGame.Run()
 ``` 
 ### Example with threaded system
